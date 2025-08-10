@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>tango.nox— Sound Engineer</title>
+  <meta name="description" content="Portfolio and profile of tango.nox— a skilled, knowledgeable, and creative sound engineer." />
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --accent:#ff6a00;
+      --text:#e8e8e8;
+      --muted:#9b9b9b;
+      --card:#141414;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.05)}
+    nav ul{display:flex;list-style:none;gap:20px}
+    nav a:hover{color:#fff}
+    .hero{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding:60px 10%}
+    .hero-text{flex:1;min-width:300px}
+    .hero-text h1{font-size:2.5rem;margin-bottom:10px}
+    .hero-text p{color:var(--muted);margin-bottom:20px}
+    .hero-text .cta{display:inline-block;background:var(--accent);padding:12px 20px;color:#000;border-radius:6px;font-weight:bold}
+    .hero-img{flex:1;min-width:300px;height:300px;background:url("https://in.pinterest.com/pin/483503709996942617/") center/cover;border-radius:12px}
+    section{padding:60px 10%}
+    h2{font-size:1.8rem;margin-bottom:20px}
+    .skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:10px;border:1px solid rgba(255,255,255,0.05)}
+    .card h3{margin-bottom:10px;color:var(--accent)}
+    .card p{color:var(--muted)}
+    footer{text-align:center;padding:20px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.05)}
+    @media(max-width:700px){
+      .hero{padding:40px 5%}
+      section{padding:40px 5%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" style="font-weight:bold;font-size:1.2rem;color:var(--accent)">tango.nox</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi — I'm tango.nox, a sound engineer who blends technical precision with creative artistry.</h1>
+      <p>With a fresh degree in Sound Engineering, I specialize in capturing, mixing, and producing audio that resonates. From live concerts to studio recordings, I bring clarity, depth, and emotion to every project.</p>
+      <a href="#contact" class="cta">Work with me</a>
+    </div>
+    <div class="hero-img"></div>
+  </section>
+
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Audio Recording</h3>
+        <p>Expert in capturing pristine sound across various environments, ensuring optimal signal flow and minimal noise.</p>
+      </div>
+      <div class="card">
+        <h3>Mixing & Mastering</h3>
+        <p>Balancing, enhancing, and finalizing tracks for a professional, polished sound ready for distribution.</p>
+      </div>
+      <div class="card">
+        <h3>Live Sound</h3>
+        <p>Setting up and managing live event audio systems with clarity, feedback control, and audience impact.</p>
+      </div>
+      <div class="card">
+        <h3>Studio Technology</h3>
+        <p>Proficient with Pro Tools, Logic Pro X, Ableton Live, and analog/digital consoles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Live Concert Mix</h3>
+        <p>Engineered FOH mix for a 5,000+ audience concert, delivering crisp vocals and balanced instrumentation.</p>
+      </div>
+      <div class="card">
+        <h3>Indie Album Production</h3>
+        <p>Recorded, mixed, and mastered a 10-track indie rock album, achieving commercial streaming quality.</p>
+      </div>
+      <div class="card">
+        <h3>Podcast Series</h3>
+        <p>Produced and edited a 20-episode podcast series, ensuring consistent audio quality and branding.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am a passionate sound engineer with a deep understanding of audio principles, acoustics, and production techniques. My approach combines technical skill with an ear for musicality, ensuring every project meets both artistic and technical excellence.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <form onsubmit="return submitForm(event)">
+        <input type="text" id="name" placeholder="Your name" required style="width:100%;margin-bottom:10px;padding:10px;border-radius:6px;border:none">
+        <input type="email" id="email" placeholder="Your email" required style="width:100%;margin-bottom:10px;padding:10px;border-radius:6px;border:none">
+        <textarea id="message" placeholder="Your message" required rows="5" style="width:100%;margin-bottom:10px;padding:10px;border-radius:6px;border:none"></textarea>
+        <button type="submit" style="background:var(--accent);padding:10px 20px;border:none;border-radius:6px;font-weight:bold;color:#000">Send Message</button>
+        <p id="formStatus" style="margin-top:10px;color:var(--muted)"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Bruno Samuel — Sound Engineer</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function submitForm(e){
+      e.preventDefault();
+      document.getElementById('formStatus').textContent = 'Thanks! Your message has been sent (demo).';
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
